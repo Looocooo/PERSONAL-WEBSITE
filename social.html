@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://use.fontawesome.com/d1341f9b7a.js%22%3E"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style social.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+   </head>
+<body>
+  <div class="navbar">
+    <ul>
+      <li class="active">
+        <a href="https://www.facebook.com/taguibao.jeff/">
+        <i class='bx bxl-facebook-circle'></i>
+        <i class='bx bxs-facebook-circle activeIcon'></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/yaboiijef/">
+          <i class='bx bxl-instagram-alt' ></i>
+          <i class='bx bxs-instagram-alt activeIcon'></i>
+        </a>
+      </li>
+      <li>
+        <a href="index.html">
+          <i class='bx bxs-home' ></i>
+          <i class='bx bxs-home activeIcon'></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/yaboii_Jep">
+          <i class='bx bxl-twitter' ></i>
+          <i class='bx bxs-twitter activeIcon'></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/Looocooo">
+          <i class='bx bxl-github' ></i>
+          <i class='bx bxs-github activeIcon'></i>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </div>
+
+  <script>
+
+  const navBar = document.querySelector(".navbar")
+        allLi = document.querySelectorAll("li");
+
+  allLi.forEach((li, index) => {
+     li.addEventListener("click" , e =>{
+       e.preventDefault(); //preventing from submitting
+       navBar.querySelector(".active").classList.remove("active");
+       li.classList.add("active");
+
+       const indicator = document.querySelector(".indicator");
+       indicator.style.transform = `translateX(calc(${index * 90}px))`;
+     });
+  });
+
+  </script>
+
+</body>
+</html>
